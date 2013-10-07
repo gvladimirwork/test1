@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+		<div style="display:inline-block;width:96%" id="content">
+			<div style="text-align: center;"><img heigth=300 width=300 src='/static/{{ i.img }}'  alt="{{ i.name }}"/></div>
+			<div><h1>{{ i.name }}</h1>
+			<p>Цена: {{ i.price }}$</p>
+			<p>Наименование: {{ i.category.name }}</p>
+			<p>Сайт производителя: <em><a href="http://{{ i.url }}">{{ i.url }}</a></em></p>
+			<p class="ref">{{ i.about }}</p></div>
+		</div>
+{% endblock %}

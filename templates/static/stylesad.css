@@ -1,0 +1,36 @@
+a:link {
+	color: #F0F8FF;
+	text-decoration:none;
+}
+a:visited {
+	color: #F0F8FF;
+	text-decoration:none;
+}
+a:active {
+	color: #F0F8FF;
+	text-decoration:none;
+}
+a:hover {
+	letter-spacing: 2px;
+	color: #FF0000;
+	text-decoration:none;
+}
+.txtstil {
+
+border: 1px solid #CCCCCC;
+
+background-color: #F7F7F7;
+
+width: 100%;
+
+font-family: times new roman;
+
+font-size: 16;
+color: #B7C3D0;
+
+}
+td {
+color: #B7C3D0;
+}
+
+<!-- THIS CSS BELONGS TO THE TEMPLATE 'CLEANWATER' MADE BY RENÉ SØRENSEN -->

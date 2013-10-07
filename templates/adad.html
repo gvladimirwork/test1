@@ -1,0 +1,30 @@
+{% extends "basead.html" %}
+{% block content %}
+{% load staticfiles %}
+<div class="prod">
+<form action="" method="post" enctype="multipart/form-data">
+   {% csrf_token %}
+    {% if error %}
+      {% for err in error%}
+      <b>{{ err }}</b>
+      {% endfor %}
+    {% endif %}
+          <ul id="inf">
+            <li><span>Название<input type='text' name='name'></span></li>
+            <li><span>Загрузить новое изображение<input type="file" name='newimg'></span>
+            <li><span>Цена: <input type='text' name='price'> </span></li>
+            <li><span>ЧПУ: <input type='text' name='chpu'> </span></li>
+            <li><span>Категория: </span>
+            <select name="category">
+              {% for cat in c %}
+                    <option value="{{ cat.id }}">{{ cat.name }}</option>
+              {% endfor %}
+            </select></li>
+            <li><span>Сайт производителя: </span>
+            <input type='text' name='url'></li>
+            <li><span>О товаре:</span><textarea cols=70 rows=10 maxlength=500 name='about'></textarea></li>
+            <li><input type="submit" name='add' value="Отправить"></li>
+          </ul>
+  </form>
+</div>
+{% endblock %}

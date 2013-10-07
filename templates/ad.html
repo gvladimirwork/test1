@@ -1,0 +1,56 @@
+{% extends "basead.html" %}
+{% block content %}
+		<div class="panel">
+		<a href="/admin/add"><input type="button" value="Добавить товар"></a>
+		<!--<input type="button" value="Выйти">-->
+		</div>
+		<div class="prod" style="display:inline-block">
+			<ul>
+				
+				{% for it in i %}
+				<li>
+				<hr style="clear:both">
+				<img src='/static/{{ it.img }}' alt="{{ it.name }}" width="120" height="120" hspace="20">
+					<ul id="inf">
+						<li><span>{{ it.name }}</span><a href="/admin/edit/{{ it.chpu }}"><input type="button" value="Редактировать" id="red"></a></li>
+						<li><span>Цена: </span>
+						{{ it.price }}$<a href="/admin/delete/{{ it.chpu }}"><input type="button" value="Удалить товар" id="red"></a></li>
+						<li><span>Категория: </span>
+						{{ it.category.name }}</li>
+						<li><span>Сайт производителя: </span>
+						<a href="http://{{ it.url }}">{{ it.url }}</a></li>
+					</ul>
+				</li>
+				<br>
+				<hr style="clear:both">
+				{% endfor %}
+			</ul>
+			<div class="page">
+				<p style='display:inline-block;white-space:nowrap;'>
+				{% if p.back %}
+					<a  href='/admin/catalog/{{ sort }}/{{ p.back }}'>Back</a>
+				{% endif %}
+				{% if not p.back %}
+					<b >Back</b>
+				{% endif %}
+				{% for pa in p.list %}
+				{% ifequal pa p.cur %}
+					<b >{{ pa }}</b>
+				{% endifequal %}
+				{% ifnotequal pa p.cur %}
+					<a style="display:inline-block;padding:0 10px;" href='/admin/catalog/{{ sort }}/{{ pa }}'>{{ pa }}</a>
+				{% endifnotequal %}
+				{% endfor %}
+				{% if p.next %}
+					<a  style="display:inline-block;padding:0 10px;" href='/admin/catalog/{{ sort }}/{{ p.next }}'>Next</a>
+				{% endif %}
+				{% if not p.next %}
+					<b >Next</b>
+				{% endif %}
+				</p>
+			</div>
+		</div>
+		
+		
+	</div>
+{% endblock %}

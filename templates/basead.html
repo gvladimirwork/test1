@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/static/adm.css">
+<script type="text/javascript" charset="utf-8" src="/static/jquery.js"></script>
+<title>Админка</title>
+</head>
+<body>
+	<div class="container">
+		<div class="cat">
+			<ul>
+				<li><a href='/admin/catalog/all/'>Все</a></li>
+				{% for cat in c %}
+	 			<li><a href="/admin/catalog/{{ cat.chpu }}/">{{ cat.name }}</a></li>
+	 			{% endfor %}
+			</ul>
+		</div>		
+{% block content %}{% endblock %}
+</body>
+</html>

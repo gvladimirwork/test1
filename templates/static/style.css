@@ -1,0 +1,185 @@
+/*==================================
+Jan002 a.k.a. 32 Not Out
+by Payal Dhar (http://writeside.net)
+24 January 2008
+Feel free to use, but please retain credit.
+====================================*/
+
+*{
+margin:0;
+padding:0;
+}
+
+body{
+background:url(images/body.jpg) center repeat-y;
+color:#707070;
+font:0.9em 'Trebuchet MS', Arial, sans-serif;
+}
+
+
+#wrapper{
+width:770px;
+margin:10px auto;
+}
+
+#title{
+height:50px;
+background:#fff;
+font-size:2.2em;
+color:#3a4a3f;
+text-align:right;
+}
+
+#title .menu{
+float:left;
+font-size:0.4em;
+}
+
+#title .menu ul li{
+float:left;
+list-style:none;
+padding:7px 5px;
+}
+
+#title .menu a{
+background:none;
+color:#cfc9bd;
+padding:0 3px;
+text-decoration:none;
+}
+
+#title .menu a:hover, a:active{
+color:#3a4a3f;
+background:#cfc9bd;
+text-decoration:none;
+}
+
+#header{
+clear:both;
+height:232px;
+width:515px;
+float:left;
+}
+
+.nav1 ul{
+float:left;
+list-style:none;
+width:250px;
+}
+
+.nav1 ul li{
+margin:5px 0;
+padding-left:20px;
+text-align:right;
+}
+
+.nav1 a{
+color:#cfc9bd;
+border-bottom:1px solid #cfc9bd;
+display:block;
+width:94%;
+height:22px;
+padding:5px;
+text-decoration:none;
+background:url(images/menu.jpg) left no-repeat;
+}
+
+.nav1 a:active, a:hover{
+color:#3a4a3f;
+background:url(images/menu-roll.jpg) left no-repeat;
+}
+
+#content{
+clear:both;
+border:1px solid #3a4a3f;
+margin:5px;
+padding:10px;
+}
+
+h1, h2, h3{
+color:#3a4a3f;
+}
+
+h1{
+font-size:1.2em;
+font-variant:small-caps;
+padding:0 0 5px;
+}
+
+h2{
+font-size:1em;
+padding:5px;
+}
+
+h3{
+font-size:0.9em;
+padding:5px;
+}
+
+p{
+padding:5px;
+line-height:1.3em;
+}
+
+p.ref{
+text-align:right;
+font-size:0.8em;
+}
+
+#content a{
+background:none;
+color:#cfc9bd;
+padding:0 3px;
+text-decoration:none;
+}
+
+#content a:hover, a:active{
+color:#3a4a3f;
+background:#cfc9bd;
+text-decoration:none;
+}
+
+blockquote{
+padding:7px 15px 0 25px;
+margin:7px 15px;
+background:#f0f0f0 url(images/blockquote.jpg) bottom left no-repeat;
+}
+
+#content ul, ol{
+padding:5px 10px 5px 40px;
+}
+
+#content ul{
+list-style:circle;
+}
+
+#content ol{
+list-style:lower-roman;
+}
+
+input, textarea{
+border:1px solid #f0f0f0;
+color:#707070;
+padding:3px;
+}
+
+input:hover, input:focus, textarea:hover, textarea:focus{
+border:1px solid #707070;
+}
+
+#footer{
+margin:5px 5px 0;
+text-align:center;
+font-size:0.8em;
+}
+
+#footer a{
+color:#3a4a3f;
+text-decoration:underline;
+background:none;
+}
+
+#footer a:hover, a:active{
+color:#707070;
+text-decoration:none;
+}

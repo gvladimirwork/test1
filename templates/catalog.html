@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+		{% for it in i %}
+		<div style="display:inline-block;width:96%" id="content">
+			<div style="float:left;"><img heigth=150 width=150 src='/static/{{ it.img }}' alt="{{ it.name }}"/></div>
+			<div style="float:left;margin-left:1%"><a href="/{{ it.chpu }}"><h1>{{ it.name }}</h1></a>
+			<p>Цена: {{ it.price }}$</p>
+			<p>Наименование: {{ it.category.name }}</p>
+			<p>Сайт производителя: <em><a href="http://{{ it.url }}">{{ it.url }}</a></em></p>
+			<p class="ref"></p></div>
+		</div>
+		{% endfor %}
+		<p style="text-align: center;">
+		{% if p.back %}
+			<a style='background:none;' href='/catalog/{{ sort }}/{{ p.back }}'>Back</a>
+		{% endif %}
+		{% if not p.back %}
+			<b>Back</b>
+		{% endif %}
+		{% for pa in p.list %}
+		{% ifequal pa p.cur %}
+			<b>{{ pa }}</b>
+		{% endifequal %}
+		{% ifnotequal pa p.cur %}
+			<a style='background:none;' href='/catalog/{{ sort }}/{{ pa }}'>{{ pa }}</a>
+		{% endifnotequal %}
+		{% endfor %}
+		{% if p.next %}
+			<a style='background:none;' href='/catalog/{{ sort }}/{{ p.next }}'>Next</a>
+		{% endif %}
+		{% if not p.next %}
+			<b>Next</b>
+		{% endif %}
+		</p>
+{% endblock %}
